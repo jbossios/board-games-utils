@@ -15,12 +15,17 @@ def main():
 
     # Button to trigger the selection
     if st.button("Select which player should start"):
-        if len(players) > 1:
+        # Make sure names were provided
+        tests_passed = True
+        for i, name in enumerate(players, 1):
+            if not name:
+                st.warning(f"The name of player {i} is missing, please enter the name for player {i}.")
+                tests_passed = False
+        # Make sure there are at least 2 players
+        if tests_passed:
             # Select a random player
             case = round(uniform(0, len(players) - 1))
             st.success(f"{players[case]} starts first!")
-        else:
-            st.warning("Please enter at least two players.")
 
 if __name__ == "__main__":
     main()
