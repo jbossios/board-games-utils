@@ -14,7 +14,7 @@ def main():
     # Button to trigger the spin of the scoring wheel
     if st.button("Spin the wheel"):
         case = round(uniform(1, len(options)))
-        st.image(f'./option_{case}.png', caption=f'Patterns to be used for scoring')
+        st.image(f'Azul/option_{case}.png', caption=f'Patterns to be used for scoring')
 
 if __name__ == "__main__":
     main()
