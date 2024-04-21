@@ -2,6 +2,13 @@ import streamlit as st
 from random import uniform
 
 def main():
+
+   # Sidebar
+    with st.sidebar:
+        st.write('Other apps:')
+        url = 'https://link.jonathanbossio.com/board-games-utils-azul-spin-the-scoring-wheel'
+        st.write("[Azul Queen's Garden -> Scoring Wheel for End Of The Turn](%s)" % url)
+
     st.title("Player Selector App")
 
     # Ask the user to input the number of players

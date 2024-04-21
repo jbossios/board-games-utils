@@ -2,6 +2,13 @@ import streamlit as st
 from random import uniform
 
 def main():
+
+    # Sidebar
+    with st.sidebar:
+        st.write('Other apps:')
+        url = 'https://link.jonathanbossio.com/board-games-utils-who-starts'
+        st.write("[Player Selector App](%s)" % url)
+
     st.title("Azul Queen's Garden")
     st.title("Scoring Wheel for End Of The Round")
 
