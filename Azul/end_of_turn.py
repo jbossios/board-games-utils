@@ -16,7 +16,7 @@ def main():
     # Button to trigger the sping of the wheel
     if st.button("Spin the wheel"):
         case = round(uniform(1, len(options)))
-        img = mpimg.imread(f'Azul/option_{case}.png')
+        img = mpimg.imread(f'option_{case}.png')
         st.image(img, caption=f'Patterns to be used for scoring')
 
 if __name__ == "__main__":
